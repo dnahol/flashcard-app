@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Flashcards</title>
+</head>
+<body>
+
+  <form ng-submit='createCard()'>
+    <div class="form-group">
+      <label for="newCat">Category</label>
+      <input type="text" class="form-control" ng-model='newCard.catetory'>
+    </div>
+    <div class="form-group">
+      <label for="newQuest">Question</label>
+      <input type="text" class="form-control" ng-model='newCard.quest'>
+    </div>
+    <div class="form-group">
+      <label for="newAns">Answer</label>
+      <input type="text" class="form-control" ng-model='newCard.ans'>
+    </div>
+    <button type="submit" class="btn btn-primary">Create Flashcard </button>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Flashcard</title>
+</head>
+<body>
+
+  <h1>Edit Flashcard</h1>
+
+  <form ng-submit='editCard(edit)'>
+    <div class="form-group">
+      <label for="editCat">Category</label>
+      <input type="text" class="form-control" ng-model='edit.category'>
+    </div>
+    <div class="form-group">
+      <label for="editQuest">Question</label>
+      <input type="text" class="form-control" ng-model='edit.quest'>
+    </div>
+    <div class="form-group">
+      <label for="editAns">Answer</label>
+      <input type="text" class="form-control" ng-model='edit.ans'>
+    </div>
+    <button type="submit" class="btn btn-primary">Edit Flashcard </button>
+  </form>
+
+</body>
+</html>

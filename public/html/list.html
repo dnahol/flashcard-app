@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Your Flashcards</title>
+</head>
+<h1>Manage Flashcards</h1>
+<body>
+  <ul>
+    <li ng-repeat='card in cards'>
+      <a>Category: {{card.category}}</a>
+      <a>Category: {{card.quest}}</a>
+      <a>Category: {{card.ans}}</a>
+      <button type="button" ui-sref='edit({ id: card.id })'>Edit</button>
+    </li>
+</body>
+</html>
