@@ -32,7 +32,7 @@ button {
   margin: 6px;
 }
 
-ol * ul {
+ol * ul, .card {
     border: 1px solid lightblue;
     box-shadow: 3px 3px 5px lightblue;
     border-radius: 15px;

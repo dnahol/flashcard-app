@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+</head>
+<h1>Quiz Yourself!</h1>
+<body>
+
+  <div class='card quest'>
+    Category: {{card.category}} <hr>
+    Question: {{card.quest}} <br>
+    <button ng-click='showme=true'>Show Answer</button>
+  </div>
+  <hr>
+  <div class='card ans' ng-show='showme'>
+    Answer: {{card.ans}}
+  </div>
+
+</body>
+</html>
