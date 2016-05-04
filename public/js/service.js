@@ -37,5 +37,4 @@ app.service('Cards', function($http) {
     });
     return catCards;
   };
-
-})
+});

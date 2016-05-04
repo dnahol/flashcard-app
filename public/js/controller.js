@@ -3,19 +3,21 @@
 var app = angular.module('flashcardApp');
 
 
-app.controller('createCtrl', function($scope) {
+app.controller('createCtrl', function(Cards, $scope) {
   console.log('createCtrl!');
 
-  $scope.createCard = newCard => {
-    console.log('createCard clicked!');
+  $scope.createCard = () => {
+    var newCard = Cards.create($scope.newCard);
+    console.log('newCard returned: ', newCard);
   }
-
 
 })
 
-app.controller('listCtrl', function($stateParams, $state) {
+app.controller('listCtrl', function($scope, allCards) {
   console.log('listCtrl!');
+  console.log('allCards: ', allCards);
 
+  $scope.cards = allCards.data; 
 
 
 })
@@ -33,6 +35,5 @@ app.controller('editCtrl', function($scope, $stateParams, $state) {
 
 app.controller('quizCtrl', function() {
   console.log('quizCtrl!');
-
 
 })

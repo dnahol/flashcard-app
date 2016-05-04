@@ -8,10 +8,12 @@
 <body>
   <ul>
     <li ng-repeat='card in cards'>
-      <a>Category: {{card.category}}</a>
-      <a>Category: {{card.quest}}</a>
-      <a>Category: {{card.ans}}</a>
-      <button type="button" ui-sref='edit({ id: card.id })'>Edit</button>
+      <ul>
+        <li>Category: {{card.category}}</li>
+        <li>Question: {{card.quest}}</li>
+        <li>Answer: {{card.ans}}</li>
+        <button type="button" ui-sref='edit({ id: card.id })'>Edit</button>
+      </ul>
     </li>
 </body>
 </html>

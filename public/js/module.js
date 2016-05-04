@@ -5,15 +5,21 @@ var app = angular.module('flashcardApp', ['ui.router', 'oitozero.ngSweetAlert'])
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
   .state('create', {
-    url: 'create',
+    url: '/create',
     templateUrl: 'html/create.html',
-    contorller: 'createCtrl'
+    controller: 'createCtrl'
   })
   // read (delete in button in list view)
   .state('list', {
     url: '/list',
     templateUrl: '/html/list.html',
-    controller: 'listCtrl'
+    controller: 'listCtrl',
+    resolve: {
+      allCards:
+      function(Cards) {
+        return Cards.getAll();
+      }
+    }
   })
   // update
   .state('edit', {
