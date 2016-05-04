@@ -7,14 +7,29 @@
 <h1>Quiz Yourself!</h1>
 <body>
 
-  <div class='card quest'>
-    Category: {{card.category}} <hr>
-    Question: {{card.quest}} <br>
-    <button ng-click='showme=true'>Show Answer</button>
+  <input type="text" ng-model='cat'>
+  <button ng-click='categories.push(cat)' ng-init="categories=[]">Add Category to Your Quiz</button>
+  <hr>
+  <ul><h3>Categories in this Quiz:</h3>
+    <li ng-repeat='cat in categories'><h4>{{cat}}</h4></li>
+  </ul>
+  <button ng-click='start=true; startQuiz()'>Start Quiz</button>
+  <hr>
+
+  <div class='card quest' ng-show='start'>
+    <p>Current Category: {{quizCards[index].category}}</p>
+    <hr>
+    <p>Question: {{quizCards[index].quest}}</p> <hr>
+    <div>
+      <button ng-click='showme=true'>Show Answer</button>
+      <button ng-click='index=index+1'>Next Card</button>
+      <button ng-click='index=0'>Start Over</button>
+    </div>
   </div>
+
   <hr>
   <div class='card ans' ng-show='showme'>
-    Answer: {{card.ans}}
+    Answer: {{quizCards[index].ans}}
   </div>
 
 </body>

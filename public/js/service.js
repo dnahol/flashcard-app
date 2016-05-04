@@ -30,11 +30,5 @@ app.service('Cards', function($http) {
     var allCards = this.getAll();
   };
 
-  this.getByCategory = category => {
-    var allCards = this.getAll();
-    var catCards = allCards.filter(function(card) {
-      return card.category === category;
-    });
-    return catCards;
-  };
+
 });
