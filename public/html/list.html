@@ -12,7 +12,11 @@
         <li>Category: {{card.category}}</li>
         <li>Question: {{card.quest}}</li>
         <li>Answer: {{card.ans}}</li>
-        <button type="button" ui-sref='edit({ id: card._id })'>Edit</button>
+        <li>{{card._id}}</li>
+        <div>
+          <button type="button" ui-sref='edit({ id: card._id })'>Edit</button>
+          <button type="button" ng-click='deleteCard(card._id)'>Delete</button>
+        </div>
       </ul>
     </li>
   </ol>
