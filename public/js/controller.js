@@ -18,11 +18,12 @@ app.controller('listCtrl', function($scope, allCards) {
 })
 
 
-app.controller('editCtrl', function($scope, $stateParams, $state) {
+app.controller('editCtrl', function(Cards, $scope, id) {
   console.log('editCtrl!');
 
-  $scope.editCard = edit => {
-    console.log('editCard clicked!');
+  $scope.editCard = (edit) => {
+    edit.id = id;
+    Cards.update(edit);
   }
 
 })

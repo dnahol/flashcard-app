@@ -27,11 +27,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: '/html/edit.html',
     controller: 'editCtrl',
     resolve: {
-      card:
+      id:
       function(Cards, $stateParams) {
-        //return a promise that will resolve to the card
         console.log('$stateParams in edit: ', $stateParams);
-        return Cards.getById($stateParams.id);
+        return $stateParams.id;
       }
     }
   })
