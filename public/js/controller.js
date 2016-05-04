@@ -8,18 +8,13 @@ app.controller('createCtrl', function(Cards, $scope) {
 
   $scope.createCard = () => {
     var newCard = Cards.create($scope.newCard);
-    console.log('newCard returned: ', newCard);
   }
-
 })
 
 app.controller('listCtrl', function($scope, allCards) {
   console.log('listCtrl!');
-  console.log('allCards: ', allCards);
 
-  $scope.cards = allCards.data; 
-
-
+  $scope.cards = allCards.data;
 })
 
 

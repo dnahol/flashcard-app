@@ -6,8 +6,8 @@
 </head>
 <h1>Manage Flashcards</h1>
 <body>
-  <ul>
-    <li ng-repeat='card in cards'>
+  <ol>
+    <li class='cardsList' ng-repeat='card in cards'>
       <ul>
         <li>Category: {{card.category}}</li>
         <li>Question: {{card.quest}}</li>
@@ -15,5 +15,6 @@
         <button type="button" ui-sref='edit({ id: card.id })'>Edit</button>
       </ul>
     </li>
+  </ol>
 </body>
 </html>
