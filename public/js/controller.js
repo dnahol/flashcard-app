@@ -16,12 +16,12 @@ app.controller('listCtrl', function(Cards, $scope, allCards) {
 
   $scope.cards = allCards.data;
 
-  $scope.deleteCard = id => {
-    console.log(id);
-    Cards.delete(id);
-    location.reload();
+  $scope.deleteCard = card => {
+    console.log('card: ', card);
+    var index = $scope.cards.indexOf($scope.card);
+    Cards.delete(card._id);
+    $scope.cards.splice(index, 1);
   }
-
 })
 
 
@@ -32,7 +32,6 @@ app.controller('editCtrl', function(Cards, $scope, id) {
     edit.id = id;
     Cards.update(edit);
   }
-
 })
 
 
